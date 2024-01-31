@@ -5,15 +5,16 @@ namespace App\Models\v1;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class District extends Model
+class MicroDistrict extends Model
 {
     use HasFactory;
     protected $fillable = [
         'name',
+        'district_id'
     ];
 
-    public function microdistricts()
+    public function district()
     {
-        return $this->hasMany(MicroDistrict::class);
+        return $this->belongsTo(District::class);
     }
 }

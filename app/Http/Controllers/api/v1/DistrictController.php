@@ -69,7 +69,7 @@ class DistrictController extends Controller
         District::findOrFail($id)->update($request->validated());
         $data=District::find($id);
         return response()->json([
-            'message' => 'One District',
+            'message' => 'District updated successfully',
             'data'=>new UpdateDistrictResource($data),
         ]);
     }

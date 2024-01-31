@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\v1\DistrictController;
 use App\Http\Controllers\api\v1\MicroDistrictController;
+use App\Http\Controllers\api\v1\OrientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('v1/district',DistrictController::class);
 Route::apiResource('v1/microdistrict',MicroDistrictController::class);
+Route::apiResource('v1/orient',OrientController::class);
